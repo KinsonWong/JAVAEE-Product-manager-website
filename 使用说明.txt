@@ -1,0 +1,42 @@
+1.创建mysql数据库 
+
+数据库参数如下：
+String driver="com.mysql.jdbc.Driver";                //驱动路径
+String url="jdbc:mysql://localhost:3306/Product";    //数据库地址
+String user="root";                                    //访问数据库的用户名
+String password="root";                            //用户密码   
+
+数据库Product中有两个表：product表存放商品信息，usert表存放用户信息
+
+sql语句：
+
+CREATE DATABASE Product;
+USE Product;
+
+  CREATE TABLE product
+(
+  id varchar(50) NOT NULL,
+  barcode varchar(13) NOT NULL,
+  name varchar(40) NOT NULL,
+  units varchar(5) NOT NULL,
+  purchasePrice varchar(10) NOT NULL,
+  salePrice varchar(10) NOT NULL,
+  inventory varchar(20) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE usert (
+  name varchar(20) NOT NULL,
+  password varchar(20) DEFAULT NULL,
+  email varchar(50) DEFAULT NULL,
+  phone varchar(50) DEFAULT NULL,
+  PRIMARY KEY (name)
+);
+
+insert into usert values('zhangsan','4151','zhangs@qq.com','13527924151');
+insert into usert values('lisi','3456','lisi@qq.com','13712653456');
+
+
+2.在eclipse中导入 WebContent\WEB-INF\lib 文件夹中的jar包
+
+3.运行
