@@ -1,0 +1,9 @@
+ProductDao是为了进行数据库操作
+pageBean是为了数据能够分页显示
+Product为了设置Product的基本信息
+ProductService是为了调用ProductDao中已定义的接口而设计的，并被ProductServlet所用
+User为了设计登陆用户的基本信息
+LoginServlet处理用户登陆请求
+RegisterServlet处理用户注册请求
+LogoutServlet处理用户登出请求
+ProductServlet处理商品变动信息
